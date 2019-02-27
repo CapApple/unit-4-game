@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row head">
+            <h1>Crystals Collector!</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 instruction">
+                <p>You will be given a random...</p>
+                <p>There are four crystals below.</p>
+                <p>You win the game by matching...</p>
+                <p>The value of each crystal..</p>
+                <p>Each time when the game starts...</p>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-8 goal"></div>
+                    <div class="col-4 results">
+                        <p>Wins: <span id="wins"></span></p>
+                        <p>Loses: <span id="losses"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row icons">
+            <div class="crystals">
+                <img id="magenta" src="assets/images/magenta.png" alt="magenta crystal">
+                <img id="blue" src="assets/images/blue.png" alt="blue crystal">
+                <img id="yellow" src="assets/images/yellow.png" alt="yellow crystal">
+                <img id="green" src="assets/images/green.png" alt="green crystal">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="row announce">
+                    <h6>Your total score is:</h6>
+                </div>
+                <div class="row score"></div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+
+    </div>
+
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>
