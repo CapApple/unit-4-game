@@ -2,7 +2,6 @@
 $(document).ready(function () {
     
     var goal = 0;
-    var currentNum = 0;
     var win = 0;
     var loss = 0;
     var score = 0;
@@ -16,24 +15,50 @@ $(document).ready(function () {
     function initiation(){
         // shuffle the value pool
         for(var i = valuePool.length; i>0; i--){
-            var index = Math.floor(Math.random()*i);
-            var temp = valuePool[i];
-            valuePool[i] = valuePool[index];
+            var index = Math.floor(Math.random()*(i-1));
+            var temp = valuePool[i-1];
+            valuePool[i-1] = valuePool[index];
             valuePool[index] = temp;
         }
-        red = valuePool[0];
-        blue = valuePool[1];
-        yellow = valuePool[2];
-        green = valuePool[3];
+        console.log(valuePool);
+
+        // assign numbers to gems
+        for(var i = 1; i<5 ; i++){
+            $("#gem-"+i).val(valuePool[i]);
+            console.log($("#gem-"+i).val());
+        }
+        
         //set random goal
         goal = Math.floor(Math.random()*120 + 19);
         console.log(goal);
+        score = 0;
+        $(".goal").html(goal);
+        $(".score").html(score);
+        $("#wins").html(win);
+        $("#losses").html(loss);
     }
 
+
+    function compare(scores) {
+        if (scores > goal) {
+            alert("You lose!");
+            loss ++;
+            initiation();
+        } else if (scores === goal) {
+            alert("You win!");
+            win ++;
+            initiation();
+        }
+    }
+
+    $(".gem").on("click", function(){
+        score = score + parseInt($(this).val());
+        console.log(score);
+        $(".score").html(score);
+        compare(score);   
+    })
+
     initiation();
-
-
-
 
 })
 
