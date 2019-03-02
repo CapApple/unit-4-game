@@ -30,17 +30,19 @@ p{
 
 .goal{
     background-color: skyblue;
-    height: 80px;
+    padding: 25px;
     text-align: center;
+    font-size: 32px;
 }
 
 .results{
     background-color: turquoise;
+    padding-top: 15px;
 }
 
 img{
     height: 60px;
-    margin: 10px;
+    margin: 0 10px 0 10px;
 }
 
 .crystals{
@@ -48,18 +50,36 @@ img{
 }
 
 .announce{
-    border-left: 0px;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    background-color: teal;
+}
+
+.space{
+    height: 5px;
 }
 
 h6{ 
     margin: 0;
-    padding: 5px;
+    /* padding: 5px; */
     color: white;
     background-color: teal;
 }
 
 .score{
+    margin: 0;
+    padding: 5px;
+    padding-top: 10px;
+    font-size: 26px;
     color: white;
     background-color: teal;
     height: 80px;
+}
+
+@media screen and (max-width: 768px){
+   .img, button{
+       margin: 0;
+       padding: 0;
+   }
 }
